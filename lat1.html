@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lat 1</title>
+</head>
+<body>
+
+	<div id="app">
+		{{ jk ? 'laki' : 'perempuan' }}
+		<br>
+		{{nama}}-{{umur}}
+		}
+	</div>
+
+</body>
+
+<script type="text/javascript" src="vue.js"></script>
+
+<script type="text/javascript">
+	new Vue({
+		el:'#app',
+		data :{
+			nama:"Irdho",
+			umur:18,
+			jk:true
+		}
+	})
+</script>
+</html>

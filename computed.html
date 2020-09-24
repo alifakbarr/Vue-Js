@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Computed</title>
+</head>
+<body>
+	<div id="app">
+		{{ biodataa }} {{ nama }}
+	</div>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript">
+	
+	var vo = new Vue({
+		el:'#app',
+		data:{
+			nama:'irdho',
+			umur:20,
+			biodata:''
+		},
+		computed: {
+			biodataa:{
+				get: function () {
+				return this.nama + ' umurnya ' + this.umur
+				},
+				set:function (params) {
+					var cridential = params.split(' ')
+					this.nama = cridential[0]
+					this.umur = cridential[1]
+				}
+			}
+		}
+	})
+
+
+</script>
+</html>
